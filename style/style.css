@@ -1,0 +1,119 @@
+/* To Do List for Next Update
+Auto Resize Box by Image Width & Height
+Posibility to download div as image
+ */
+
+body {
+	text-align: -webkit-center;
+	color: #fff;
+	/* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+}
+
+/* This img css rule is using just to determine width of all img tags */
+img {
+	width: 15px;
+}
+
+.box {
+	position: relative;
+	width: 676px;
+	height: 676px;
+	background-color: #000;
+	background-repeat: no-repeat;
+	border: 25px solid;
+	border-image: linear-gradient(190deg, rgb(251, 255, 0), darkorchid) 1;
+	/* display: block; */
+	/* box-shadow: 10px 10px 42px 0 rgba(0,0,0,0.75); */
+	/* background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg); */
+}
+
+.text {
+	/* Margin Top Depends on box background-image height */
+	/* margin-top: 676px; */
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: -webkit-center;
+	@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+	font-family: 'Roboto', sans-serif;
+}
+
+figcaption {
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	font-size: 2em;
+	padding: 15px;
+	inline-size: -webkit-fill-available;
+}
+
+.socialmedias {
+	font-size: 1.5em;
+	/* display: block; */
+}
+
+/* Table */
+table {
+	padding: 10px;
+	font-size: 1.5em;
+	color: black;
+	text-align-last: center;
+}
+
+table .buttons td {
+	width: 50%;
+}
+
+table .button:hover {
+	background-color: darkorchid;
+}
+
+table td input[type=text] {
+	width: -webkit-fill-available;
+}
+
+table .size {
+	text-align: center;
+	background-color: rgb(233, 233, 233);
+}
+
+table .size input[type=text] {
+	border: none;
+	font-weight: bold;
+}
+
+table input[type=button] {
+	width: -webkit-fill-available;
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 8px;
+}
+
+table tr td.title {
+	font-size: 2em;
+}
+
+table tr td.header {
+	background-color: rgb(233, 233, 233);
+	padding: 5px;
+	border-radius: 8px;
+	font-weight: bold;
+}
+
+.normal {
+	background-color: gainsboro;
+}
+
+.button {
+	background-color: rgb(216, 132, 216);
+}
+
+.green {
+	background-color: green;
+}
+
+.red {
+	background-color: red;
+}

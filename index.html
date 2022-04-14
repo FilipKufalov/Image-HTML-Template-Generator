@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/style.css">
     <title>Image Template Generator/Applier</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -13,20 +13,89 @@
 
 <body>
     <!-- Open Inspect Element, Right Click on <div class="box"> and click Capture Node Screenshot (Tested and Working on Microsoft Edge) -->
-    <div class="box">
+    <div id="boxID" class="box">
         <div class="text">
-            <figcaption>
-                Your Caption
+            <figcaption id="customizablecaption">
+                Caption
             </figcaption>
 
-            <div class="socialmedias">
-                <img src="./img/youtube.png" /> Username
-                <img src="./img/instagram.png" /> Username
-                <img src="./img/tiktok.png" /> Username
-                <img src="./img/facebook.png" /> Username
+            <div id="socialmediadisplay" class="socialmedias">
+                <img src="./img/youtube.png" /> <span id="span_customizable_profile_yt">Username</span>
+                <img src="./img/instagram.png" /> <span id="span_customizable_profile_ig">Username</span>
+                <img src="./img/tiktok.png" /> <span id="span_customizable_profile_tt">Username</span>
+                <img src="./img/facebook.png" /> <span id="span_customizable_profile_fb">Username</span>
             </div>
         </div>
     </div>
+    <br>
+
+    <table>
+        <tr>
+            <td class="title" colspan="2">Customizable Post</td>
+        </tr>
+        <tr>
+            <td class="header" colspan="2">Customizable Background & Border</td>
+        </tr>
+        <tr>
+            <td>Background Image:</td>
+            <td><input type="text" name="bgimage" id="input_customizable_background_image" placeholder="https://imagetolink.com/image.png" size="35"></td>
+        </tr>
+        <tr class="size">
+            <td>Width:<input type="text" name="boxwidth" id="input_customizable_box_width" placeholder="676px" size="7"></td>
+            <td>Height:<input type="text" name="boxheight" id="input_customizable_box_height" placeholder="676px" size="7"></td>
+        </tr>
+        <tr>
+            <td class="header" colspan="2">Customizable Social Media Profiles</td>
+        </tr>
+        <tr>
+            <td>YouTube:</td>
+            <td>
+                <input type="text" name="caption" id="input_customizable_profile_yt" placeholder="Username for YouTube">
+            </td>
+        </tr>
+        <tr>
+            <td>Instagram:</td>
+            <td>
+                <input type="text" name="caption" id="input_customizable_profile_ig" placeholder="Username for Instagram">
+            </td>
+        </tr>
+        <tr>
+            <td>TikTok:</td>
+            <td>
+                <input type="text" name="caption" id="input_customizable_profile_tt" placeholder="Username for TikTok">
+            </td>
+        </tr>
+        <tr>
+            <td>Facebook:</td>
+            <td>
+                <input type="text" name="caption" id="input_customizable_profile_fb" placeholder="Username for Facebook">
+            </td>
+        </tr>
+        <tr class="buttons">
+            <td><input onclick="ShowSocialMediaPlatform()" type="button" value="Show" class="green"></td>
+            <td><input onclick="HideSocialMediaPlatform()" type="button" value="Hide" class="red"></td>
+        </tr>
+        <tr>
+            <td class="header" colspan="2">Customizable Caption Settings</td>
+        </tr>
+        <tr>
+            <td>Caption:</td>
+            <td>
+                <input type="text" name="caption" id="input_customizable_caption" placeholder="Your Caption">
+            </td>
+        </tr>
+        <tr class="buttons">
+            <td><input onclick="ShowCaption()" type="button" value="Show" class="green"></td>
+            <td><input onclick="HideCaption()" type="button" value="Hide" class="red"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input onclick="CustomizablePost()" type="button" value="Change" class="button">
+            </td>
+        </tr>
+    </table>
+
+    <script src="./scripts/script.js"></script>
 </body>
 
 </html>
